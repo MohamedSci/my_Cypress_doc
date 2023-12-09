@@ -1,0 +1,23 @@
+{
+  "name": "cypress-io-youtube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "start-server-and-test start http://localhost:1234 cy:run",
+    "start": "npm run open",
+    "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/build\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "angular-http-server": "^1.12.0",
+    "concurrently": "^8.2.2",
+    "cypress": "^13.6.1",
+    "http-server": "^14.1.1",
+    "start-server-and-test": "^2.0.3"
+  }
+}
